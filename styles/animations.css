@@ -12,11 +12,15 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-@keyframes arrow {
+@keyframes theme-switch-movement {
     to {
         transform: translate(4px);
     }
 }
+
+.like-icon {
+    transform-origin: center;
+  }  
 
 .like-icon .main-body {
     fill: var(--color-border);
@@ -38,7 +42,7 @@
 }
   
 .like-icon .sparks {
-    fill: var(--color-border);
+    opacity: 0;
 }
 
 .like-icon:hover .main-body {
@@ -61,6 +65,11 @@
     transition: fill 0.3s linear;
 }
 
+.like-icon.is-liked {
+    fill: var(--accent-color);
+    animation: increase-like-icon 0.3s ease-in 0.1s 1 alternate;
+}
+
 .like-icon.is-liked .contour {
     fill: var(--like-color);
     transition: fill 0.3s linear 0.06s;
@@ -76,29 +85,19 @@
     transition: fill 0.3s linear;
 }
 
-.like-icon.is-liked .heart {
-    animation: heart-scale 0.3s ease-in 0.1s 1 alternate;
+.like-icon.is-liked .sparks {
+    fill: var(--like-color);
+    animation: sparks-of-like-icon 0.3s ease-in 0.3s 1 alternate;
+  }
+  
+@keyframes sparks-of-like-icon {
+    to {
+        opacity: 1;
+    }
 }
 
-@keyframes heart-scale {
-    from {
-        transform: scale(1);
-    }
+@keyframes increase-like-icon {
     to {
         transform: scale(1.5);
-    }
-}
-
-
-.like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s 1 alternate ;
-}
-
-@keyframes sparks {
-    from {
-        fill: var(--color-border);
-    }
-    to {
-        fill: var(--like-color);
     }
 }
