@@ -193,15 +193,16 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  gap: 8px;
+  gap: 7px;
   margin-bottom: 8px;
 }
 
 .card__icon-button {
-  width: 39px;
-  height: 34px;
+  display: flex;
+  height: fit-content;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  appearance: none;
 }
 
 .card__icon-button:focus {
@@ -209,7 +210,7 @@ button {
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .button {
@@ -308,7 +309,6 @@ button {
   block-size: border-box;
   color: var(--accent-color);
   font-family: var(--accent-font, 'Press Start 2P', monospace);
-  color: var(--accent-color);
   font-size: 14px;
   font-weight: var(--weight-main-font);
   text-transform: uppercase;
@@ -338,10 +338,12 @@ button {
 
 .text_button {
   line-height: 21px;
+  color: var(--accent-color);
 }
 
 .dialog__button {
   width: 100%;
+  text-transform: uppercase;
 }
 
 .filter_brightness {
