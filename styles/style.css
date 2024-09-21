@@ -307,7 +307,6 @@ button {
   border: 2px solid var(--accent-color);
   max-width: clamp(21.313rem, 21.0489rem + 1.1268vw, 22.063rem);
   block-size: border-box;
-  color: var(--accent-color);
   font-family: var(--accent-font, 'Press Start 2P', monospace);
   font-size: 14px;
   font-weight: var(--weight-main-font);
