@@ -306,7 +306,6 @@ button {
   background-color: var(--backgroun-color);
   border: 2px solid var(--accent-color);
   max-width: clamp(21.313rem, 21.0489rem + 1.1268vw, 22.063rem);
-  block-size: border-box;
   font-family: var(--accent-font, 'Press Start 2P', monospace);
   font-size: 14px;
   font-weight: var(--weight-main-font);
@@ -333,6 +332,7 @@ button {
   width: 39px;
   height: 39px;
   flex: none;
+  color: var(--accent-color);
 }
 
 .text_button {
@@ -399,11 +399,11 @@ button {
 
 @supports (
   (-webkit-text-stroke: 1px var(--color-border)) or
-    (text-stroke: 1px var(--color-border))
+    (stroke: 1px var(--color-border))
 ) {
   .label_card_image {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--color-border);
-    text-stroke: 1px var(--color-border);
+    stroke: 1px var(--color-border);
     }
   }
